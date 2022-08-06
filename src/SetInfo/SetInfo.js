@@ -8,10 +8,15 @@ import {
   MickeyMouseColors,
   MickeyMouseColorsCountIncluded,
 } from "./Sets/MickeyMouse";
+import {
+  HarryPotterColors,
+  HarryPotterColorsCountIncluded,
+} from "./Sets/HarryPotter";
 import ElvisImg from "../Images/elvis-lego-set.png";
 import MickeyMouseImg from "../Images/mickey-mouse.png";
 import MarilynMonroeImg from "../Images/marilyn-monroe.png";
 import BatmanImg from "../Images/batman-set.png";
+import HarryPotterImg from "../Images/harry-potter.png";
 
 export const getSetInfo = (title, type) => {
   switch (title) {
@@ -39,6 +44,12 @@ export const getSetInfo = (title, type) => {
         : type === "#"
         ? BatmanColorsCountIncluded
         : BatmanImg;
+    case "Harry Potter":
+      return type === "c"
+        ? HarryPotterColors
+        : type === "#"
+        ? HarryPotterColorsCountIncluded
+        : HarryPotterImg;
     default:
       return null;
   }

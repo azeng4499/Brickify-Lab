@@ -18,7 +18,13 @@ const ChoosePalette = () => {
   const algorithm = useSelector((state) => state.algorithm);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const sets = ["Elvis Presley", "Mickey Mouse", "Marilyn Monroe", "Batman"];
+  const sets = [
+    "Elvis Presley",
+    "Mickey Mouse",
+    "Marilyn Monroe",
+    "Batman",
+    "Harry Potter",
+  ];
 
   useEffect(() => {
     if (!croppedImage) {
@@ -71,7 +77,7 @@ const ChoosePalette = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className="min-h-[1000px] md:min-h-[1100px] lg:min-h-[700px] lg:h-[calc(100vh-100px)] h-screen w-screen flex justify-evenly items-center bg-dark-blue flex-col">
         <div>
           <div>

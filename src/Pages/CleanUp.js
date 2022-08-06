@@ -40,7 +40,7 @@ const CleanUp = () => {
   return (
     <>
       <Header />
-      <div className="min-h-[900px] md:min-h-[1200px] lg:min-h-[700px] lg:h-[calc(100vh-100px)] h-screen w-screen flex justify-evenly items-center bg-dark-blue">
+      <div className="min-h-[1000px] md:min-h-[1200px] lg:min-h-[700px] lg:h-[calc(100vh-100px)] h-screen w-screen flex justify-evenly items-center bg-dark-blue">
         <div>
           <div className="h-[50px] bg-black flex justify-center items-center text-center px-[5px]">
             <div className="font-bold text-white text-sm max-w-[300px] md:max-w-[1000px]">

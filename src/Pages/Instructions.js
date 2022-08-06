@@ -5,6 +5,8 @@ import MosaicPreview from "../Utils/MosaicPreview";
 import { getSetInfo } from "../SetInfo/SetInfo";
 import { findColor } from "../Utils/MathUtils";
 import { useNavigate } from "react-router-dom";
+import { Link as LinkR } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Instructions = () => {
   const [chosenSquare, setChoseSquare] = useState(0);
@@ -39,14 +41,14 @@ const Instructions = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className="min-h-[800px] md:min-h-[1100px] lg:min-h-[700px] lg:h-[calc(100vh-100px)] h-screen w-screen flex justify-evenly items-center bg-dark-blue flex-col">
         <div className="flex flex-col justify-center items-center">
-          <div className="h-fit w-fit bg-black p-[20px] border-2">
+          <div className="h-fit w-fit bg-black border-2 px-[5px]">
             <div className="h-fit w-full flex justify-center items-center font-bold text-white text-sm">
               Extra Pieces You'll Need
             </div>
-            <div className="h-fit w-full flex justify-center items-center gap-5 pt-[20px]">
+            <div className="h-fit w-full flex justify-center items-center gap-5 pt-[5px]">
               {Object.entries(extraPieces).map((piece) => {
                 return (
                   <div className="text-white flex flex-col justify-center item-center">
@@ -62,7 +64,7 @@ const Instructions = () => {
             </div>
           </div>
           <div className="flex">
-            <div className="w-[28px] h-fit bg-black justify-center grid justify-evenly items-center gap-1 py-[5px]">
+            <div className="w-[28px] h-full bg-black justify-center grid justify-evenly items-center gap-1 py-[5px]">
               {Object.entries(colors).map((color) => {
                 return (
                   <div
@@ -123,6 +125,15 @@ const Instructions = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="h-[50px] p-[10px] w-full bg-black flex items-center justify-end">
+            <LinkR
+              to="/"
+              className="flex justify-end items-center"
+            >
+              <div className="font-bold text-white text-lg">Back To Home</div>{" "}
+              <AiOutlineArrowRight size="2em" color="white" />
+            </LinkR>
           </div>
         </div>
       </div>
